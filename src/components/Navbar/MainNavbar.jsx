@@ -1,28 +1,30 @@
-import React from "react";
-import { Phone, Mail, MapPin   } from 'lucide-react';
-import { Link } from "react-router-dom";
-import { useNavigate, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Phone, Menu } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import HamBurgerOverlay from "./HamBurgerOverlay";
 
 function MainNavbar() {
-
-    const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const handleScroll = (id) => {
-    if (location.pathname !== "/") {
-      // Navigate to home first
-      navigate("/", { state: { scrollTo: id } });
-    } else {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    }
+  const NavLink = ({ to, children }) => {
+    const isActive = location.pathname === to;
+    return (
+      <Link 
+        to={to} 
+        className={`transition-colors duration-200 ${
+          isActive ? 'text-amber-300' : 'text-white hover:text-amber-300'
+        }`}
+      >
+        {children}
+      </Link>
+    );
   };
-
 
   return (
     <>
-      <div className="relative flex justify-between items-center py-10 px-50 shadow-sm overflow-hidden bg-white">
-        {/* Amber slanted background shape */}
+      <div className="relative flex justify-between items-center py-5 md:py-10 px-7 md:px-15 lg:px-50 shadow-sm overflow-hidden bg-white">
+        {/* Blue slanted background shape */}
         <div
           className="absolute top-0 left-0 h-full w-[80%] bg-[#0A3D62] z-10"
           style={{
@@ -30,19 +32,48 @@ function MainNavbar() {
           }}
         ></div>
 
-        <div className="flex gap-26 z-10 text-white">
-          <h1 className="font-bold text-2xl">Logo</h1>
+        <Link to='/' className="lg:hidden z-20 block font-bold text-2xl text-white">
+          Logo
+        </Link>
+
+        <div className="hidden lg:flex gap-26 z-20 text-white">
+          <Link to='/' className="font-bold text-2xl z-20 text-white hover:text-amber-300 transition-colors duration-200">
+            Logo
+          </Link>
           <ul className="flex gap-8 text-lg cursor-pointer">
-            <Link to={'/'} className="hover:text-amber-300">Home</Link>
-            <li onClick={() => handleScroll("about")} className="hover:text-amber-300">About Us</li>
-            <li onClick={() => handleScroll("services")} className="hover:text-amber-300">Services</li>
-            <li onClick={() => handleScroll("calltoaction")} className="hover:text-amber-300">Contact</li>
-            <Link to={'/refund-policy'} className="hover:text-amber-300">Refund Policy</Link>
+            <li>
+              <NavLink to={"/"}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/about-us"}>About Us</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/services"}>Services</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/contact"}>Contact</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/refund-policy"}>Refund Policy</NavLink>
+            </li>
           </ul>
         </div>
 
-        <button className="p-3 px-5 border text-lg z-10 bg-[#0A3D62] text-white cursor-pointer hover:opacity-90 ">
-          <div className="flex gap-2 items-center "><Phone className='w-3.5 '/> <span>+19083142247</span></div></button>
+        <button className="hidden lg:block p-3 px-5 border text-lg bg-[#0A3D62] text-white cursor-pointer transition-colors duration-300 z-20 hover:text-[#0A3D62] hover:border-[#0A3D62]">
+          <div className="flex gap-2 items-center">
+            <Phone className="w-3.5" />
+            <span>+19083142247</span>
+          </div>
+        </button>
+
+        <button
+          onClick={() => setIsOpen(true)}
+          className="lg:hidden p-2 md:p-3 rounded-sm border bg-[#0A3D62] flex items-center justify-center z-20"
+        >
+          <Menu className="w-5 h-5 text-white" />
+        </button>
+
+        <HamBurgerOverlay setIsOpen={setIsOpen} isOpen={isOpen}/>
       </div>
     </>
   );

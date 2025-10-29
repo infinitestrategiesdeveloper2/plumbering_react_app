@@ -5,7 +5,9 @@ import MainNavbar from './MainNavbar'
 function Navbar() {
   return (
     <>
+    <div className='hidden lg:block'>
     <TopNavbar/>
+    </div>
     <MainNavbar/>
     </>
   )

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import HeroSection from '../HeroSection/HeroSection'
 
 function RefundPolicy() {
   const sections = [
@@ -20,24 +21,8 @@ function RefundPolicy() {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <div className="bg-linear-to-r from-[#0A3D62] to-[#05233A] text-white py-24 px-6 md:px-20 text-center">
-        <motion.h1
-          className="text-4xl md:text-5xl font-extrabold leading-tight"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Refund Policy
-        </motion.h1>
-        <motion.p
-          className="mt-4 max-w-2xl mx-auto text-gray-200 text-md md:text-lg"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          At Digital Sprints, customer satisfaction is our top priority. Please review our refund policy below.
-        </motion.p>
-      </div>
+      <HeroSection name='Refund Policy' description='At Digital Sprints, customer satisfaction is our top priority.'/>
+
 
       {/* Content Section */}
       <div className="max-w-4xl mx-auto px-6 md:px-0 py-16 flex flex-col gap-12">

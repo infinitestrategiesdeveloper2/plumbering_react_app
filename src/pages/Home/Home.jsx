@@ -5,19 +5,9 @@ import OurServices from './OurServices/OurServices'
 import CallToAction from './CallToAction/CallToAction'
 import WorkingProgress from './WorkingProgress/WorkingProgress'
 import WhyChooseUs from './WhyChooseUs/WhyChooseUs'
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import FrequentAskQuestion from './FrequentAskQuestion/FrequentAskQuestion'
 
 function Home() {
-
-    const location = useLocation();
-
-  useEffect(() => {
-    if (location.state?.scrollTo) {
-      const el = document.getElementById(location.state.scrollTo);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [location]);
 
 
   return (
@@ -28,6 +18,7 @@ function Home() {
     <CallToAction/>
     <WorkingProgress/>
     <WhyChooseUs/>
+    <FrequentAskQuestion/>
     </>
   )
 }

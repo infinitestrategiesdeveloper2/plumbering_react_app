@@ -9,13 +9,13 @@ function CallToAction() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="relative py-24 overflow-hidden bg-gray-100"
+      className="relative py-16 md:py-20 lg:py-24 overflow-hidden bg-gray-100"
     >
       {/* Background Image */}
       <img
         src="calltoaction.png"
         alt="calltoactionbg"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="hidden lg:block absolute inset-0 w-full h-full object-cover"
       />
 
       {/* Animated Gradient Overlay */}
@@ -60,38 +60,38 @@ function CallToAction() {
       </div>
 
       {/* Foreground Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center text-white">
-        <div className="relative w-full max-w-5xl rounded-3xl bg-white/10 backdrop-blur-md p-10 flex flex-col md:flex-row items-center justify-between gap-10 shadow-2xl border border-white/20">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 text-center text-white">
+        <div className="relative w-full max-w-5xl rounded-2xl md:rounded-3xl bg-white/10 backdrop-blur-md p-6 md:p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-30 lg:gap-10 shadow-xl md:shadow-2xl border border-white/20">
           {/* Left Text & Form */}
-          <div className="flex flex-col gap-8 w-full md:w-1/2">
-            <h1 className="text-3xl font-semibold leading-snug">
-              Having an <span className="text-amber-300">urgent problem</span> and can’t wait?
+          <div className="flex flex-col gap-6 md:gap-7 lg:gap-8 w-full md:w-1/2">
+            <h1 className="text-2xl md:text-2xl lg:text-3xl font-semibold leading-snug">
+              Having an <span className="text-amber-300">urgent problem</span> and can't wait?
             </h1>
 
-            <form className="flex flex-col gap-4">
-              <div className="flex flex-col sm:flex-row gap-3">
+            <form className="flex flex-col gap-3 md:gap-4">
+              <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
                 <input
                   type="text"
                   placeholder="Name"
-                  className="flex-1 p-3 rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                  className="flex-1 p-2 md:p-3 rounded-lg md:rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-amber-300 text-sm md:text-base"
                 />
                 <input
                   type="email"
                   placeholder="Email"
-                  className="flex-1 p-3 rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                  className="flex-1 p-2 md:p-3 rounded-lg md:rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-amber-300 text-sm md:text-base"
                 />
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
                 <input
                   type="text"
                   placeholder="Phone Number"
-                  className="flex-1 p-3 rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                  className="flex-1 p-2 md:p-3 rounded-lg md:rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-amber-300 text-sm md:text-base"
                 />
                 <motion.button
                   whileHover={{ scale: 1.05, boxShadow: "0 0 25px #FBBF24" }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-6 py-3 bg-amber-300 text-[#0A3D62] font-semibold rounded-xl transition-all duration-300"
+                  className="cursor-pointer px-5 md:px-6 py-2 md:py-3 bg-amber-300 hover:!bg-amber-400 text-[#0A3D62] font-semibold rounded-lg md:rounded-xl transition-all duration-300 text-sm md:text-base"
                 >
                   Submit
                 </motion.button>
@@ -100,11 +100,11 @@ function CallToAction() {
           </div>
 
           {/* Animated Image (unchanged) */}
-          <div className="relative flex justify-center items-center md:w-1/2">
+          <div className="relative flex justify-center items-center md:w-1/2 ">
             <motion.img
               src="callaction.png"
               alt="callaction"
-              className="w-72 md:w-80 drop-shadow-2xl"
+              className="w-60 md:w-72 lg:w-80 drop-shadow-2xl"
               animate={{
                 y: [0, -20, 0],
               }}
@@ -117,7 +117,7 @@ function CallToAction() {
 
             {/* Soft Pulse Glow Behind Image */}
             <motion.div
-              className="absolute w-72 h-72 bg-amber-300/40 rounded-full blur-[120px]"
+              className="absolute w-60 h-60 md:w-72 md:h-72 lg:w-72 lg:h-72 bg-amber-300/40 rounded-full blur-[120px]"
               animate={{
                 opacity: [0.3, 0.6, 0.3],
                 scale: [1, 1.1, 1],
@@ -129,6 +129,8 @@ function CallToAction() {
               }}
             />
           </div>
+
+          
         </div>
       </div>
     </motion.div>
