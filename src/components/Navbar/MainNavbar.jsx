@@ -33,14 +33,14 @@ function MainNavbar() {
         ></div>
 
         <Link to='/' className="lg:hidden z-20 block font-bold text-2xl text-white">
-          Logo
+          <img src="./logo/logo2.PNG" className="w-44 h-9 md:w-55 md:h-11" alt="KingHaven_logo" />
         </Link>
 
         <div className="hidden lg:flex gap-26 z-20 text-white">
           <Link to='/' className="font-bold text-2xl z-20 text-white hover:text-amber-300 transition-colors duration-200">
-            Logo
+            <img src="./logo/logo2.PNG" className="w-50 h-10 " alt="KingHaven_logo" />
           </Link>
-          <ul className="flex gap-8 text-lg cursor-pointer">
+          <ul className="flex gap-8 text-lg cursor-pointer items-center">
             <li>
               <NavLink to={"/"}>Home</NavLink>
             </li>

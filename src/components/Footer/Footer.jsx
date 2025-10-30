@@ -104,7 +104,7 @@ function Footer() {
             whileHover={{ scale: 1.03 }}
             className="text-2xl md:text-3xl font-extrabold text-amber-400"
           >
-            LOGO
+            <img src="./logo/logo2.PNG" className="w-40 h-8 md:w-48 md:h-10 lg:w-50 lg:h-10" alt="KindHaven" />
           </motion.h1>
 
           <p className="text-sm md:text-md text-gray-100 leading-relaxed opacity-90 font-medium">

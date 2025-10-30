@@ -48,7 +48,7 @@ function HamBurgerOverlay({ isOpen, setIsOpen }) {
           >
             {/* Header with accent color */}
             <div className="px-6 py-6 flex justify-between items-center bg-[#0A3D62]">
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 ml-5">
                 <div className="w-3 h-3 bg-white/80 rounded-full"></div>
                 <span className="text-white/90 text-sm font-medium tracking-wide">
                   MENU
