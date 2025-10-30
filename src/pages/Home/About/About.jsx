@@ -63,36 +63,33 @@ function About({ active }) {
             ))}
           </ul>
 
-          <MotionLink
-          to={'/about-us'}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="cursor-pointer w-full sm:w-[250px] group mt-4 md:mt-6 flex items-center justify-center gap-2 px-6 py-3 bg-amber-300 text-[#0A3D62] font-semibold rounded-full shadow-md hover:!bg-amber-400 transition-all duration-300 mx-auto md:mx-0"
-          >
-{
-  active ? (
-    <>
-      <Phone
-        className="w-5 transition-transform duration-300 group-hover:translate-x-1"
-        strokeWidth={1.5}
-        />
-        <span>+19083142247</span>
-    </>
-  ) : (
-    <>
-      <span>Know More</span>
-      <ArrowRightToLine
-        className="w-5 transition-transform duration-300 group-hover:translate-x-1"
-        strokeWidth={1.5}
-      />
-    </>
-  )
-}
-
-          </MotionLink>
-
-
-          
+          {active ? (
+            <MotionLink
+              to="tel:+16592135042"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="cursor-pointer w-full sm:w-[250px] group mt-4 md:mt-6 flex items-center justify-center gap-2 px-6 py-3 bg-amber-300 text-[#0A3D62] font-semibold rounded-full shadow-md hover:!bg-amber-400 transition-all duration-300 mx-auto md:mx-0"
+            >
+              <Phone
+                className="w-5 transition-transform duration-300 group-hover:translate-x-1"
+                strokeWidth={1.5}
+              />
+              <span>+1 659 213 5042</span>
+            </MotionLink>
+          ) : (
+            <MotionLink
+              to={"/about-us"}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="cursor-pointer w-full sm:w-[250px] group mt-4 md:mt-6 flex items-center justify-center gap-2 px-6 py-3 bg-amber-300 text-[#0A3D62] font-semibold rounded-full shadow-md hover:!bg-amber-400 transition-all duration-300 mx-auto md:mx-0"
+            >
+              <span>Know More</span>
+              <ArrowRightToLine
+                className="w-5 transition-transform duration-300 group-hover:translate-x-1"
+                strokeWidth={1.5}
+              />
+            </MotionLink>
+          )}
         </motion.div>
 
         {/* Image Section */}

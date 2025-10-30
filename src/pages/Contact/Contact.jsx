@@ -31,7 +31,7 @@ function Contact() {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <HeroSection name='Contact' description='At Digital Sprints, customer satisfaction is our top priority.'/>
+      <HeroSection name='Contact' description='At KindHaven, customer satisfaction is our top priority.'/>
 
       {/* Content Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -117,11 +117,11 @@ function Contact() {
                 >
                   <Mail className="w-5 h-5" style={{ color: themeColor }} />
                   <a 
-                    href="mailto:Info@digital-sports.com" 
+                    href="mailto:info@kindhaven.net" 
                     className="hover:underline transition-colors"
                     style={{ color: themeColor }}
                   >
-                    Info@digital-sports.com
+                    info@kindhaven.net
                   </a>
                 </motion.div>
                 <motion.div 
@@ -129,7 +129,7 @@ function Contact() {
                   whileHover={{ x: 5 }}
                 >
                   <MapPin className="w-5 h-5 mt-1" style={{ color: themeColor }} />
-                  <span>783 Extens St. Elizabeth, NJ 07903-3088</span>
+                  <span>3801 DYLAN PL LEXINGTON, KY 40514</span>
                 </motion.div>
               </motion.div>
             </motion.div>

@@ -4,40 +4,41 @@ import { useState, useEffect } from "react";
 function Testimonials() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      position: "CEO, TechStart Inc.",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-      text: "Digital Sprints transformed our online presence completely. Their attention to detail and creative approach helped us increase our conversion rate by 45% in just three months!",
-    },
-    {
-      id: 2,
-      name: "Michael Chen",
-      position: "Marketing Director, GrowthLab",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-      text: "Working with Digital Sprints was a game-changer for our business. Their team is professional, responsive, and delivered beyond our expectations. Highly recommended!",
-    },
-    {
-      id: 3,
-      name: "Emily Rodriguez",
-      position: "Founder, Bloom & Grow",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-      text: "The results speak for themselves! Our website traffic increased by 300% and we're generating qualified leads consistently. Digital Sprints understands our vision perfectly.",
-    },
-    {
-      id: 4,
-      name: "David Thompson",
-      position: "Operations Manager, SwiftSolutions",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
-      text: "Outstanding service from start to finish. They not only built us a beautiful website but also provided comprehensive digital marketing strategies that actually work.",
-    },
-  ];
+const testimonials = [
+  {
+    id: 1,
+    name: "James Carter",
+    position: "Homeowner, Greenfield Estate",
+    image:
+      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=100&q=80",
+    text: "KindHaven Plumbing saved the day! They arrived within the hour, fixed a major leak, and left everything spotless. Truly professional and reliable service.",
+  },
+  {
+    id: 2,
+    name: "Linda Martinez",
+    position: "Restaurant Owner, Bluefin Diner",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80",
+    text: "Our kitchen drain was constantly clogging, but after KindHaven’s visit, everything runs perfectly. They explained everything clearly and charged fairly.",
+  },
+  {
+    id: 3,
+    name: "Robert King",
+    position: "Property Manager, CityHomes",
+    image:
+      "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&q=80",
+    text: "We use KindHaven for all our rental properties — fast, efficient, and dependable. Their emergency service has saved us countless times!",
+  },
+  {
+    id: 4,
+    name: "Emma Wilson",
+    position: "Home Renovator",
+    image:
+      "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=100&q=80",
+    text: "KindHaven handled all the plumbing for our bathroom remodel. Excellent workmanship and communication throughout the project. Highly recommended!",
+  },
+];
+
 
   // Auto-rotate testimonials
   useEffect(() => {
@@ -61,7 +62,7 @@ function Testimonials() {
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our clients have to say
-            about their experience with Digital Sprints.
+            about their experience with KindHaven.
           </p>
         </div>
 

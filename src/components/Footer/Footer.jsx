@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MoveRight, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -71,13 +72,13 @@ function Footer() {
             </div>
 
             <p className="flex items-center gap-2 hover:text-amber-300 transition">
-              <MapPin className="w-4 sm:w-5 text-amber-400" /> 732 Eaton St, Elizabeth, NJ 07202-1618
+              <MapPin className="w-4 sm:w-5 text-amber-400" /> 3801 DYLAN PL LEXINGTON, KY 40514
+            </p>
+            <p className="underline flex items-center gap-2 hover:text-amber-300 transition">
+              <Mail className="w-4 sm:w-5 text-amber-400" /> <Link to={"mailto:info@kindhaven.net"} className="underline" >info@kindhaven.net</Link>
             </p>
             <p className="flex items-center gap-2 hover:text-amber-300 transition">
-              <Mail className="w-4 sm:w-5 text-amber-400" /> info@digital-sprints.com
-            </p>
-            <p className="flex items-center gap-2 hover:text-amber-300 transition">
-              <Phone className="w-4 sm:w-5 text-amber-400" /> +1 908-314-2247
+              <Phone className="w-4 sm:w-5 text-amber-400" /> +1 659 213 5042
             </p>
           </motion.div>
 
@@ -88,7 +89,7 @@ function Footer() {
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
             className="text-sm text-gray-400 mt-3 md:mt-4"
           >
-            © 2025 Digital Sprints — Refund Policy
+            © 2025 KindHaven — All Rights Reserved.
           </motion.p>
         </motion.div>
 

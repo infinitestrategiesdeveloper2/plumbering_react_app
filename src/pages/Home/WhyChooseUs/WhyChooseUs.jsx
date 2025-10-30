@@ -17,7 +17,7 @@ function WhyChooseUs() {
           </p>
 
           <h1 className="text-2xl sm:text-3xl md:text-3xl lg:text-5xl font-extrabold text-gray-800 leading-tight">
-            Welcome to Digital Sprints, Your Trusted Partner In Home Warranty Services
+            Welcome to KindHaven, Your Trusted Partner In Home Warranty Services
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mt-3 md:mt-4">

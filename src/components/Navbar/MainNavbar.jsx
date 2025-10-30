@@ -59,10 +59,10 @@ function MainNavbar() {
           </ul>
         </div>
 
-        <Link to="tel:+19083142247" className="hidden lg:block p-3 px-5 border text-lg bg-[#0A3D62] text-white cursor-pointer transition-colors duration-300 z-20 hover:text-[#0A3D62] hover:border-[#0A3D62] hover:bg-white">
+        <Link to="tel:+16592135042" className="hidden lg:block p-3 px-5 border text-lg bg-[#0A3D62] text-white cursor-pointer transition-colors duration-300 z-20 hover:text-[#0A3D62] hover:border-[#0A3D62] hover:bg-white">
           <div className="flex gap-2 items-center">
             <Phone className="w-3.5" />
-            <span>+19083142247</span>
+            <span>+1 659 213 5042</span>
           </div>
         </Link>
 

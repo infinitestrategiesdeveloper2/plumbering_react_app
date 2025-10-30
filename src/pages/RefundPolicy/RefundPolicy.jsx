@@ -21,7 +21,7 @@ function RefundPolicy() {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <HeroSection name='Refund Policy' description='At Digital Sprints, customer satisfaction is our top priority.'/>
+      <HeroSection name='Refund Policy' description='At KindHaven, customer satisfaction is our top priority.'/>
 
 
       {/* Content Section */}

@@ -17,7 +17,7 @@ function AboutUs() {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <HeroSection name='About Us' description='At Digital Sprints, customer satisfaction is our top priority.'/>
+      <HeroSection name='About Us' description='At KindHaven, customer satisfaction is our top priority.'/>
 
       {/* About Section */}
       <About active={true}/>

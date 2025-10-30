@@ -150,18 +150,18 @@ function FrequentAskQuestion({color}) {
                       {item.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600 pb-3 sm:pb-4 leading-relaxed text-sm sm:text-base">
-                      {item.answer.includes('+19083142247') ? (
+                      {item.answer.includes('+16592135042') ? (
                         <p>
-                          {item.answer.split('+19083142247')[0]}
+                          {item.answer.split('+16592135042')[0]}
                           <a 
-                            href="tel:+19083142247"
+                            href="tel:+16592135042"
                             className="inline-flex items-center gap-1 font-semibold transition-colors"
                             style={{ 
                               color: theme.primary,
                               '--hover-color': color ? '#083055' : '#B45309'
                             }}
                           >
-                            <span>+19083142247</span>
+                            <span>+1 659 213 5042</span>
                           </a>
                         </p>
                       ) : (
@@ -185,7 +185,7 @@ function FrequentAskQuestion({color}) {
               <p className="text-gray-600 mb-3 md:mb-4 text-sm sm:text-base">Our experts are here to help you 24/7</p>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                 <Link 
-                  to="tel:+19083142247"
+                  to="tel:+16592135042"
                   className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 font-semibold rounded-lg transition-colors shadow-sm text-sm sm:text-base"
                   style={{ 
                     backgroundColor: theme.primaryLight,
@@ -193,9 +193,10 @@ function FrequentAskQuestion({color}) {
                     '--hover-bg': theme.primary
                   }}
                 >
-                  Call Now +19083142247
+                  Call Now +1 659 213 5042
                 </Link>
-                <button 
+                <Link 
+                to="/contact"
                   className=" cursor-pointer inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 border font-semibold rounded-lg transition-colors text-sm sm:text-base"
                   style={{ 
                     borderColor: theme.primaryLight,
@@ -204,7 +205,7 @@ function FrequentAskQuestion({color}) {
                   }}
                 >
                   Send Message
-                </button>
+                </Link>
               </div>
             </div>
           </div>

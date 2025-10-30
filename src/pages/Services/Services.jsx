@@ -10,7 +10,7 @@ function Services() {
       {/* Hero Section */}
       <HeroSection
         name="Our Services"
-        description="At Digital Sprints, customer satisfaction is our top priority."
+        description="At KindHaven, customer satisfaction is our top priority."
       />
       {/* Our Services  Section*/}
       <OurServices />
