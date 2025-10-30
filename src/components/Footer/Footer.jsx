@@ -34,13 +34,13 @@ function Footer() {
             <h2 className="text-2xl lg:text-3xl font-bold tracking-wide">Get In Touch</h2>
             {/* Cards - Only visible on large screens */}
             <div className="hidden lg:flex gap-3">
-              {["card.png", "visa.png", "paypal.png", "stripe.png", "americanexpress.png"].map(
+              {["mastercard.png", "visa.png", "discover.png", "americanexpress.png"].map(
                 (card, idx) => (
                   <motion.img
                     key={idx}
                     src={`./cards/${card}`}
                     alt={card}
-                    className="w-10 h-8 opacity-80 hover:opacity-100 transition-transform duration-200"
+                    className="w-15 h-12 opacity-80 hover:opacity-100 transition-transform duration-200"
                     whileHover={{ scale: 1.2 }}
                   />
                 )
