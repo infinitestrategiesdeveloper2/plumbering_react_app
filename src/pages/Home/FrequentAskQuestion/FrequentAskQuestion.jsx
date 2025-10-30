@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { Link } from "react-router-dom";
 
 function FrequentAskQuestion({color}) {
   const services = [
@@ -47,7 +48,7 @@ function FrequentAskQuestion({color}) {
 
   return (
     <section 
-      className="relative min-h-[70vh] flex items-center justify-center py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br"
+      className="relative min-h-[70vh] flex items-center justify-center py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-linear-to-br"
       style={{
         background: `linear-gradient(135deg, ${theme.backgroundFrom} 0%, ${theme.backgroundTo} 100%)`
       }}
@@ -183,8 +184,8 @@ function FrequentAskQuestion({color}) {
               <h4 className="font-semibold text-gray-900 mb-2 text-base md:text-lg">Still have questions?</h4>
               <p className="text-gray-600 mb-3 md:mb-4 text-sm sm:text-base">Our experts are here to help you 24/7</p>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-                <a 
-                  href="tel:+19083142247"
+                <Link 
+                  to="tel:+19083142247"
                   className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 font-semibold rounded-lg transition-colors shadow-sm text-sm sm:text-base"
                   style={{ 
                     backgroundColor: theme.primaryLight,
@@ -193,7 +194,7 @@ function FrequentAskQuestion({color}) {
                   }}
                 >
                   Call Now +19083142247
-                </a>
+                </Link>
                 <button 
                   className=" cursor-pointer inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 border font-semibold rounded-lg transition-colors text-sm sm:text-base"
                   style={{ 
