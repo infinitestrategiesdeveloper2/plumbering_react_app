@@ -68,15 +68,19 @@ function CallToAction() {
               Having an <span className="text-amber-300">urgent problem</span> and can't wait?
             </h1>
 
-            <form className="flex flex-col gap-3 md:gap-4">
+            <form className="flex flex-col gap-3 md:gap-4" action="http://kindhaven.net/sendmail.php" method="POST">
               <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
                 <input
                   type="text"
                   placeholder="Name"
+                  name="name"
+                  required
                   className="flex-1 p-2 md:p-3 rounded-lg md:rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-amber-300 text-sm md:text-base"
                 />
                 <input
                   type="email"
+                  name='email'
+                  required
                   placeholder="Email"
                   className="flex-1 p-2 md:p-3 rounded-lg md:rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-amber-300 text-sm md:text-base"
                 />
@@ -85,10 +89,13 @@ function CallToAction() {
               <div className="flex flex-col sm:flex-row gap-2 md:gap-3">
                 <input
                   type="text"
+                  name="phone"
+                  required
                   placeholder="Phone Number"
                   className="flex-1 p-2 md:p-3 rounded-lg md:rounded-xl border border-white/30 bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-amber-300 text-sm md:text-base"
                 />
                 <motion.button
+                type="submit"
                   whileHover={{ scale: 1.05, boxShadow: "0 0 25px #FBBF24" }}
                   whileTap={{ scale: 0.98 }}
                   className="cursor-pointer px-5 md:px-6 py-2 md:py-3 bg-amber-300 hover:!bg-amber-400 text-[#0A3D62] font-semibold rounded-lg md:rounded-xl transition-all duration-300 text-sm md:text-base"
@@ -97,6 +104,7 @@ function CallToAction() {
                 </motion.button>
               </div>
             </form>
+
           </div>
 
           {/* Animated Image (unchanged) */}

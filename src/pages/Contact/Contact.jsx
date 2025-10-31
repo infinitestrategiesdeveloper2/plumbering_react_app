@@ -148,7 +148,8 @@ function Contact() {
                 </h3>
               </motion.div>
 
-              <form className="space-y-6">
+              {/* Form Section */}
+              <form className="space-y-6" action="http://kindhaven.net/sendmail.php" method="POST">
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -159,6 +160,7 @@ function Contact() {
                   </label>
                   <input
                     type="text"
+                    name='name'
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-200"
                     style={{ focusRingColor: themeColor }}
                     placeholder="Enter your full name"
@@ -175,6 +177,7 @@ function Contact() {
                   </label>
                   <input
                     type="email"
+                    name='email'
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-200"
                     style={{ focusRingColor: themeColor }}
                     placeholder="Enter your email address"
@@ -190,6 +193,7 @@ function Contact() {
                     Select Subject
                   </label>
                   <select 
+                  name='subject'
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-200"
                     style={{ focusRingColor: themeColor }}
                   >
@@ -211,6 +215,7 @@ function Contact() {
                   </label>
                   <textarea
                     rows={6}
+                    name='message'
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent transition-all duration-200 resize-none"
                     style={{ focusRingColor: themeColor }}
                     placeholder="Type your message here..."
@@ -230,6 +235,9 @@ function Contact() {
                   SEND MESSAGE
                 </motion.button>
               </form>
+
+
+
             </motion.div>
           </motion.div>
         </div>

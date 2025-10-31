@@ -114,6 +114,7 @@ function Footer() {
 
           {/* Email Form */}
           <motion.form
+            action="http://kindhaven.net/sendmail.php" method="POST"
             className="flex w-full mt-1 md:mt-2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -121,6 +122,7 @@ function Footer() {
           >
             <input
               type="email"
+              name="email"
               placeholder="Enter your email"
               className="flex-1 p-2 md:p-3 px-3 md:px-4 rounded-l-xl md:rounded-l-2xl border border-gray-300 bg-white/20 text-white placeholder-gray-200 outline-none focus:ring-2 focus:ring-amber-400 transition text-sm md:text-base"
             />
