@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MoveRight, Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function Footer() {
   return (
@@ -114,7 +115,49 @@ function Footer() {
 
           {/* Email Form */}
           <motion.form
-            action="http://kindhaven.net/sendmail.php" method="POST"
+onSubmit={async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    try {
+      const response = await fetch("https://kindhaven.net/sendmail.php", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.text();
+
+      if (result.includes("success")) {
+        Swal.fire({
+          icon: "success",
+          title: "Subscribed!",
+          text: "🎉 Thank you! You've successfully subscribed to our newsletter.",
+          confirmButtonColor: "#FBBF24",
+        });
+        e.target.reset();
+      } else if (result.includes("invalid_email")) {
+        Swal.fire({
+          icon: "warning",
+          title: "Invalid Email",
+          text: "⚠️ Please enter a valid email address.",
+          confirmButtonColor: "#FBBF24",
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "❌ Something went wrong. Please try again later.",
+          confirmButtonColor: "#FBBF24",
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Network Error",
+        text: "🚨 Please check your connection and try again.",
+        confirmButtonColor: "#FBBF24",
+      });
+      console.error(error);
+    }
+  }}
             className="flex w-full mt-1 md:mt-2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -135,6 +178,7 @@ function Footer() {
               <MoveRight className="w-4 md:w-5" strokeWidth={1.5} />
             </motion.button>
           </motion.form>
+
         </motion.div>
       </div>
     </footer>

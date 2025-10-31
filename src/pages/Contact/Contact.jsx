@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 import HeroSection from '../HeroSection/HeroSection'
+import Swal from "sweetalert2";
 
 function Contact() {
   const themeColor = "#0A3D62";
@@ -149,7 +150,49 @@ function Contact() {
               </motion.div>
 
               {/* Form Section */}
-              <form className="space-y-6" action="http://kindhaven.net/sendmail.php" method="POST">
+              <form className="space-y-6" onSubmit={async (e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.target);
+                  try {
+                    const response = await fetch("https://kindhaven.net/sendmail.php", {
+                      method: "POST",
+                      body: formData,
+                    });
+                    const result = await response.text();
+              
+                    if (result.includes("success")) {
+                      Swal.fire({
+                        icon: "success",
+                        title: "Subscribed!",
+                        text: "🎉 Thank you! You've successfully subscribed to our newsletter.",
+                        confirmButtonColor: "#FBBF24",
+                      });
+                      e.target.reset();
+                    } else if (result.includes("invalid_email")) {
+                      Swal.fire({
+                        icon: "warning",
+                        title: "Invalid Email",
+                        text: "⚠️ Please enter a valid email address.",
+                        confirmButtonColor: "#FBBF24",
+                      });
+                    } else {
+                      Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "❌ Something went wrong. Please try again later.",
+                        confirmButtonColor: "#FBBF24",
+                      });
+                    }
+                  } catch (error) {
+                    Swal.fire({
+                      icon: "error",
+                      title: "Network Error",
+                      text: "🚨 Please check your connection and try again.",
+                      confirmButtonColor: "#FBBF24",
+                    });
+                    console.error(error);
+                  }
+                }}>
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
